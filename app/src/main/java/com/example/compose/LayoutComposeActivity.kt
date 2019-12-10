@@ -9,8 +9,7 @@ import androidx.ui.core.Text
 import androidx.ui.core.dp
 import androidx.ui.core.setContent
 import androidx.ui.foundation.DrawImage
-import androidx.ui.layout.Column
-import androidx.ui.layout.Spacing
+import androidx.ui.layout.*
 import androidx.ui.res.imageResource
 import androidx.ui.tooling.preview.Preview
 
@@ -27,10 +26,15 @@ class LayoutComposeActivity : AppCompatActivity() {
 @Composable
 fun newsStory() {
     val image = +imageResource(R.drawable.ic_header)
-    DrawImage(image = image)
 
     Column(modifier = Spacing(16.dp))
     {
+        Container(modifier = Height(180.dp) wraps Expanded) {
+            DrawImage(image = image)
+        }
+
+        HeightSpacer(16.dp)
+
         Text("Weather for today")
         Text("Car racing tomorrow")
         Text("Politics")
