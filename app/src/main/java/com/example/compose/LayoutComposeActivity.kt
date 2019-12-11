@@ -9,7 +9,9 @@ import androidx.ui.core.Text
 import androidx.ui.core.dp
 import androidx.ui.core.setContent
 import androidx.ui.foundation.DrawImage
+import androidx.ui.graphics.Color
 import androidx.ui.layout.*
+import androidx.ui.material.surface.Surface
 import androidx.ui.res.imageResource
 import androidx.ui.tooling.preview.Preview
 
@@ -36,7 +38,9 @@ fun newsStory() {
         HeightSpacer(16.dp)
 
         Text("Weather for today")
-        Text("Car racing tomorrow")
+        Surface(color = Color.Blue) {
+            Text("Car racing tomorrow")
+        }
         Text("Politics")
     }
 }
