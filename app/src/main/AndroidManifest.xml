@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".LayoutComposeActivity" />
+        <activity android:name=".SecondActivity" />
     </application>
 
 </manifest>
